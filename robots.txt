@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://study-buddy-ai-4131.lovable.app/sitemap.xml

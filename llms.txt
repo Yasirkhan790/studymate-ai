@@ -1,0 +1,13 @@
+# StudyMate AI
+
+> AI-powered study companion that explains topics, summarizes content, generates quizzes and creates structured study notes.
+
+StudyMate AI helps students learn faster by combining explanations, summaries, quizzes and note-taking into a single interface powered by Google Gemini.
+
+## Pages
+- [Home](/): Product overview and hero.
+- [Features](/features): Full list of AI and study features.
+- [AI Assistant](/assistant): Generate explanations, summaries, quizzes and notes.
+- [Saved Notes](/notes): Locally-stored AI study notes.
+- [About](/about): Mission and how the AI feature works.
+- [Contact](/contact): Get in touch with the team.
