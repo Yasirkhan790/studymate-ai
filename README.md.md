@@ -6,185 +6,382 @@
 
 ## Problem Statement
 
-Students today waste hours jumping between websites, PDFs, lecture videos, and notes just to understand a single topic and prepare for exams. There is no single, focused tool that explains hard concepts, summarizes content, tests knowledge, and stores study notes in one seamless experience.
+Students often spend hours switching between websites, textbooks, PDFs, videos, and handwritten notes to understand a single topic. This process is slow and inefficient. StudyMate AI solves this problem by providing explanations, summaries, quizzes, and organized study notes from a single AI-powered application.
+
+---
 
 ## Target Users
 
-- **High school and college students** who need quick, clear explanations of difficult topics.
-- **Self-learners and online course takers** who want summaries and quizzes to reinforce learning.
-- **Exam candidates** who need organized study notes and practice questions.
-- **Teachers and tutors** who want to generate supplementary study materials for students.
+- High school students
+- College and university students
+- Self-learners
+- Online course learners
+- Competitive exam candidates
+- Teachers and tutors
 
-## Live Demo
+---
 
-**Deployed URL:** `[YOUR_LIVE_URL_HERE]`
+# Live Demo
 
-Replace the placeholder above with the actual live URL after publishing.
+**Application URL**
 
-## Public GitHub Repository
+https://study-buddy-ai-4131.lovable.app
 
-**Repository URL:** `[YOUR_GITHUB_REPO_URL_HERE]`
+The application is publicly deployed using Lovable Publish and is accessible from any modern web browser.
 
-Replace the placeholder above with the public GitHub repository link.
+---
 
-## Complete Features
+# Public GitHub Repository
 
-StudyMate AI brings together four core study workflows into a single, modern, responsive web application:
+Repository:
 
-### 1. Explain Topic
-Enter any topic and receive a clear, beginner-friendly explanation written in simple English with short paragraphs and helpful bullet points.
+https://github.com/Yasirkhan790/studymate-ai
 
-### 2. Summarize Text
-Paste long articles, textbook passages, or lecture notes and instantly receive concise, well-organized study summaries.
+---
 
-### 3. Generate Quiz
-Create five multiple-choice questions (A–D) on any topic, complete with a clearly marked answer key and short explanations.
+# Features
 
-### 4. Study Notes
-Generate structured study notes with headings and bullet points, then save, search, delete, and export them as `.txt` files.
+StudyMate AI combines multiple learning tools into one modern application.
 
-### Additional Features
+## Explain Topic
 
-- **Save & Manage Notes:** All saved notes are stored in the browser's local storage and can be searched, deleted individually, or bulk-exported.
-- **Copy & Download Responses:** Every AI response can be copied to the clipboard or downloaded as a `.txt` file.
-- **Dark Mode Toggle:** A persistent dark/light mode switch that respects user preference across sessions.
-- **Responsive Glassmorphic UI:** Premium modern design with blue gradient accents, soft shadows, and mobile-first responsiveness.
-- **Validated Contact Form:** A contact page with client-side validation and success feedback.
-- **Full SEO:** Meta tags, Open Graph, Twitter cards, JSON-LD, dynamic sitemap, `robots.txt`, and `llms.txt`.
-- **Accessibility:** Semantic HTML, ARIA labels, keyboard navigation, and focus-visible styles.
+Enter any topic and receive a beginner-friendly explanation using simple English and structured formatting.
 
-## AI Feature Explanation
+## Summarize Text
 
-StudyMate AI is powered by **Google Gemini 3.6 Flash** through the **Lovable AI Gateway** (OpenAI-compatible API). When a student selects a mode and submits content, the request is sent securely to a TanStack Start server function. The server function builds a system prompt and mode-specific instructions, calls the Gemini model, and returns the generated response to the user.
+Paste long articles, lecture notes, or textbook content and receive concise study summaries.
+
+## Generate Quiz
+
+Generate five multiple-choice questions with answers to test understanding of any topic.
+
+## Study Notes
+
+Create structured study notes with headings and bullet points.
+
+## Saved Notes
+
+- Save notes locally
+- Search notes
+- Delete notes
+- Export notes as TXT files
+
+## Copy & Download
+
+- Copy AI responses
+- Download responses as TXT
+
+## Dark Mode
+
+Supports persistent light and dark themes.
+
+## Responsive Design
+
+Optimized for desktop, tablet, and mobile devices.
+
+## Contact Page
+
+Includes client-side validation and success feedback.
+
+## Accessibility
+
+- Semantic HTML
+- Keyboard navigation
+- ARIA labels
+- Focus-visible styling
+
+## SEO
+
+- Meta tags
+- Open Graph
+- Twitter Cards
+- robots.txt
+- Dynamic sitemap
+- JSON-LD
+- llms.txt
+
+---
+
+# Project Highlights
+
+- Original AI-powered study assistant
+- Built as the ACT-AI Final Project
+- Uses Google's Gemini AI
+- Secure server-side AI integration
+- Modern responsive interface
+- Mobile friendly
+- Accessible
+- SEO optimized
+
+---
+
+# AI Feature
+
+StudyMate AI uses Google's Gemini 3.6 Flash model through the Lovable AI Gateway.
+
+Users can choose one of four learning modes:
+
+- Explain Topic
+- Summarize Text
+- Generate Quiz
+- Study Notes
+
+The request is securely processed by a server function before being sent to Gemini.
 
 The AI is instructed to:
-- Use simple, student-friendly English.
-- Keep paragraphs short and use bullet points where helpful.
-- Never invent facts.
-- Encourage learning rather than simply giving answers.
-- Format all output in clean Markdown.
 
-## Full System Prompt
+- Explain concepts in simple English
+- Keep paragraphs short
+- Use bullet points
+- Generate quizzes with answers
+- Create structured notes
+- Avoid hallucinations
+- Encourage learning instead of simply providing answers
+
+---
+
+# System Prompt
 
 ```
 You are StudyMate AI.
+
 Your job is to help students learn faster.
 
-Rules:
+Rules
+
 - Explain difficult topics in simple English.
 - Use short paragraphs.
-- Use bullet points when helpful.
-- If summarizing, produce concise study notes.
-- If generating quizzes, create five multiple-choice questions with answers (label options A-D and clearly mark the correct answer).
-- If creating notes, organize them into headings and bullet points.
+- Use bullet points where appropriate.
+- Summarize content into concise study notes.
+- Generate five multiple-choice questions with answers.
+- Organize notes into headings and bullet points.
 - Never invent facts.
 - Encourage learning instead of simply giving answers.
-
-Format all output using clean Markdown.
+- Format all responses using clean Markdown.
 ```
 
-## Technologies and Services Used
+---
 
-| Category | Technology / Service |
-|----------|----------------------|
-| Frontend | React 19, TanStack Router, TanStack Start |
-| Backend | TanStack Start Server Functions (edge / Cloudflare Workers) |
-| Styling | Tailwind CSS v4 with OKLCH theme tokens |
-| UI Components | shadcn/ui, Lucide React icons, Sonner toasts |
-| AI Model | Google Gemini 3.6 Flash |
-| AI Gateway | Lovable AI Gateway (OpenAI-compatible) |
+# Application Architecture
+
+```
+React Client
+
+↓
+
+TanStack Router
+
+↓
+
+TanStack Start Server Function
+
+↓
+
+Lovable AI Gateway
+
+↓
+
+Google Gemini 3.6 Flash
+
+↓
+
+AI Response
+
+↓
+
+User Interface
+```
+
+---
+
+# Technologies Used
+
+| Category | Technology |
+|----------|------------|
+| Frontend | React 19 |
+| Routing | TanStack Router |
+| Server | TanStack Start |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| UI Components | shadcn/ui |
+| Icons | Lucide React |
 | Validation | Zod |
-| Storage | Browser localStorage for saved notes |
-| Deployment | Lovable Publish (Cloudflare Workers) |
+| Notifications | Sonner |
+| AI | Google Gemini 3.6 Flash |
+| AI Gateway | Lovable AI Gateway |
+| Storage | Browser Local Storage |
+| Deployment | Lovable Publish |
+| Version Control | GitHub |
 
-## Installation Steps
+---
 
-1. **Clone the repository**
+# Installation
 
-   ```bash
-   git clone [YOUR_GITHUB_REPO_URL_HERE]
-   cd studymate-ai
-   ```
+Clone the repository
 
-2. **Install dependencies**
+```bash
+git clone https://github.com/Yasirkhan790/studymate-ai.git
 
-   ```bash
-   bun install
-   ```
+cd studymate-ai
+```
 
-3. **Set up environment variables**
+Install dependencies
 
-   Create a `.env` file in the project root and add the required variable (see Environment Variables below).
+```bash
+bun install
+```
 
-4. **Run the development server**
+Run development server
 
-   ```bash
-   bun run dev
-   ```
+```bash
+bun run dev
+```
 
-5. **Open the app**
+Open
 
-   Navigate to [http://localhost:8080](http://localhost:8080) in your browser.
+```
+http://localhost:8080
+```
 
-## Environment Variables
+---
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `LOVABLE_API_KEY` | Auto-provisioned by Lovable; used server-side only to authenticate AI Gateway requests. | Yes |
+# Build
 
-## Folder Structure
+Create a production build
+
+```bash
+bun run build
+```
+
+Preview production build
+
+```bash
+bun run start
+```
+
+---
+
+# Environment Variables
+
+Create a `.env` file.
+
+Required variable:
+
+| Variable | Description |
+|----------|-------------|
+| LOVABLE_API_KEY | Used by the Lovable AI Gateway for Gemini requests |
+
+Do not commit API keys to GitHub.
+
+---
+
+# Deployment
+
+This application is deployed using Lovable Publish.
+
+Deployment URL
+
+https://study-buddy-ai-4131.lovable.app
+
+Deployment process:
+
+1. Push code to GitHub.
+2. Connect repository to Lovable.
+3. Configure environment variables.
+4. Deploy.
+5. Verify all AI features.
+
+---
+
+# Folder Structure
 
 ```
 .
-├── public/
-│   ├── robots.txt              # Search engine crawler instructions
-│   └── llms.txt                # Structured project overview for AI crawlers
-├── src/
-│   ├── components/
-│   │   ├── site-footer.tsx     # Site-wide footer with links and attribution
-│   │   └── site-nav.tsx        # Sticky navigation + dark mode toggle
-│   ├── hooks/
-│   │   └── use-mobile.tsx      # Responsive breakpoint hook
-│   ├── lib/
-│   │   ├── ai.functions.ts     # Server function calling Gemini via Lovable AI Gateway
-│   │   ├── error-capture.ts    # Error capture utilities
-│   │   ├── error-page.ts       # Error page helpers
-│   │   ├── lovable-error-reporting.ts
-│   │   └── utils.ts            # General utility functions
-│   ├── routes/
-│   │   ├── __root.tsx          # Global layout, SEO defaults, fonts
-│   │   ├── about.tsx           # About / mission page
-│   │   ├── assistant.tsx       # AI Assistant (Explain / Summarize / Quiz / Notes)
-│   │   ├── contact.tsx         # Validated contact form
-│   │   ├── features.tsx        # Feature showcase page
-│   │   ├── index.tsx           # Landing / hero page
-│   │   ├── notes.tsx           # Saved notes dashboard (localStorage)
-│   │   └── sitemap[.]xml.ts    # Dynamic sitemap generation
-│   ├── router.tsx              # TanStack Router configuration
-│   ├── server.ts               # Server entry configuration
-│   ├── start.ts                # Start / middleware configuration
-│   └── styles.css              # Tailwind v4 theme, glassmorphism, animations
-├── README.md                   # Project documentation
-├── package.json                # Dependencies and scripts
-└── vite.config.ts              # Vite build configuration
+├── public
+│   ├── favicon.ico
+│   ├── robots.txt
+│   └── llms.txt
+│
+├── src
+│   ├── components
+│   ├── hooks
+│   ├── lib
+│   ├── routes
+│   ├── router.tsx
+│   ├── server.ts
+│   ├── start.ts
+│   └── styles.css
+│
+├── README.md
+├── package.json
+├── vite.config.ts
+└── bun.lock
 ```
 
-## Screenshots
+---
 
-Add screenshots to `/screenshots/` and reference them here:
+# Screenshots
 
-| Home | AI Assistant | Saved Notes |
-|------|--------------|-------------|
-| ![Home](screenshots/home.png) | ![Assistant](screenshots/assistant.png) | ![Notes](screenshots/notes.png) |
+Create a folder named `screenshots` and place these images inside.
 
-## Future Improvements
+### Home Page
 
-- Cloud sync for notes across devices.
-- Voice input for the AI Assistant.
-- Flashcards with spaced repetition.
-- PDF upload and summarization.
-- Multi-language support.
+![Home](screenshots/home.png)
 
-## License
+### AI Assistant
 
-MIT
+![Assistant](screenshots/assistant.png)
+
+### Saved Notes
+
+![Notes](screenshots/notes.png)
+
+### About Page
+
+![About](screenshots/about.png)
+
+---
+
+# Future Improvements
+
+- User authentication
+- Cloud synchronization
+- PDF upload
+- Voice assistant
+- Flashcards
+- Spaced repetition
+- AI chat history
+- Multi-language support
+- Mobile application
+
+---
+
+# Author
+
+**Yasir Khan**
+
+Final Project submitted for the ACT-AI Program.
+
+GitHub
+
+https://github.com/Yasirkhan790
+
+---
+
+# Acknowledgements
+
+This project was developed as the Final Project for the ACT-AI Program.
+
+Special thanks to the ACT-AI instructors and mentors for their guidance throughout the course.
+
+Google Gemini provides the AI capabilities used by this application.
+
+---
+
+# License
+
+MIT License
+
+Copyright (c) 2026 Yasir Khan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files to use, copy, modify, merge, publish, distribute, sublicense, and sell copies of the software, subject to the conditions of the MIT License.
